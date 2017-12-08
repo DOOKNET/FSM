@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_12_7_FSM/TestBeach/tb_FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_12_7_FSM/FSM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Fri Dec 08 22:48:53 2017
+# Process ID: 3920
+# Current directory: E:/Workspace/Vivado_16.4/2017_12_7_FSM/FSM.runs/synth_1
+# Command line: vivado.exe -log FSM.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FSM.tcl
+# Log file: E:/Workspace/Vivado_16.4/2017_12_7_FSM/FSM.runs/synth_1/FSM.vds
+# Journal file: E:/Workspace/Vivado_16.4/2017_12_7_FSM/FSM.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source FSM.tcl -notrace
