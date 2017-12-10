@@ -25,41 +25,35 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 //---------组合逻辑，描述下一状态----------//
+reg	out;
 always @(current_state or din) begin
+	next_state = s0;
+	out = 0;
 	case (current_state)
-		s0:
+		s0:	begin
+			out = 0;
 			next_state = (din == 0) ? s1 : s0; 
-		s1: 
+			end
+		s1: begin
+			out = 0;
 			next_state = (din == 1) ? s2 : s1;
-		s2: 
+			end
+		s2: begin
+			out = 0;
 			next_state = (din == 0) ? s3 : s0;
-		s3: 
-			next_state = (din == 1) ? s0 : s1;
+			end
+		s3: begin
+			if(din == 1)	begin
+				out = 1;
+				next_state = s0;
+			end
+			else	begin
+				out = 0;
+				next_state = s1;
+			end
+			end
 	  	default: ;
 	endcase
-end
-
-//-----------输出逻辑------------//
-reg	out;
-always @(posedge clk or negedge rst_n) begin
-	if(!rst_n)	begin
-		out <= 0;
-	end
-	else	begin
-		case (current_state)
-			s0:
-				out <= 0;
-			s1:
-				out <= 0;
-			s2:
-				out <= 0;
-			s3:	
-				if(din == 1)	out <= 1;
-				else	out <= 0;
-		  	default:
-			  	out <= 0;
-		endcase
-	end
 end
 
 assign	dout = out;

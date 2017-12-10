@@ -5,11 +5,11 @@ Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v" Line 1. Module FSM doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v" Line 1. Module FSM doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM_book.v" Line 1. Module FSM_book doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM_book.v" Line 1. Module FSM_book doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.FSM
+Compiling module xil_defaultlib.FSM_book
 Compiling module xil_defaultlib.tb_FSM
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_FSM_behav

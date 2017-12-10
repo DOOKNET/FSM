@@ -57,7 +57,7 @@ end
 //---------------------------------//
 
 //-------------例化模块-------------//
-FSM			FSM_inst0(
+FSM_book			FSM_inst0(
 	.clk	(sclk),
 	.rst_n	(rst_n),
 	.din	(din),
