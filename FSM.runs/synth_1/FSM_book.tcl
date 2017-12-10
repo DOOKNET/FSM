@@ -17,14 +17,14 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo e:/Workspace/Vivado_16.4/2017_12_7_FSM/FSM.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v
+read_verilog -library xil_defaultlib E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM_book.v
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp
 }
 
-synth_design -top FSM -part xc7a35tcpg236-1
+synth_design -top FSM_book -part xc7a35tcpg236-1
 
 
-write_checkpoint -force -noxdef FSM.dcp
+write_checkpoint -force -noxdef FSM_book.dcp
 
-catch { report_utilization -file FSM_utilization_synth.rpt -pb FSM_utilization_synth.pb }
+catch { report_utilization -file FSM_book_utilization_synth.rpt -pb FSM_book_utilization_synth.pb }

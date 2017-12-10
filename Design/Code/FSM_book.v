@@ -1,4 +1,4 @@
-module FSM(
+module FSM_book(
 	input	clk,
 	input	rst_n,
 	input	din,

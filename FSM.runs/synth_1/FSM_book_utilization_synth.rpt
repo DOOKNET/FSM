@@ -1,13 +1,13 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
--------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (win64) Build 1733598 Wed Dec 14 22:35:39 MST 2016
-| Date         : Fri Dec 08 22:49:17 2017
+| Date         : Sun Dec 10 11:24:18 2017
 | Host         : DESKTOP-JC6NIF0 running 64-bit major release  (build 9200)
-| Command      : report_utilization -file FSM_utilization_synth.rpt -pb FSM_utilization_synth.pb
-| Design       : FSM
+| Command      : report_utilization -file FSM_book_utilization_synth.rpt -pb FSM_book_utilization_synth.pb
+| Design       : FSM_book
 | Device       : 7a35tcpg236-1
 | Design State : Fully Placed
--------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 
 Utilization Design Information
 

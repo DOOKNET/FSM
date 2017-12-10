@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log FSM.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source FSM.tcl
+EAStep vivado -log FSM_book.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source FSM_book.tcl

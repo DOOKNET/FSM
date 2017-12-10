@@ -46,7 +46,7 @@ initial	begin
 	#20
 	din = 1;
 	#20
-	din = 0;
+	din = 1;
 	#20
 	din = 1;
 	#20

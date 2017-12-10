@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log FSM.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source FSM.tcl
+    with args -log FSM_book.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source FSM_book.tcl
 
 
 ****** Vivado v2016.4 (64-bit)
@@ -8,40 +8,38 @@
   **** IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 
-source FSM.tcl -notrace
-Command: synth_design -top FSM -part xc7a35tcpg236-1
+source FSM_book.tcl -notrace
+Command: synth_design -top FSM_book -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7340 
+INFO: Helper process launched with PID 7864 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 296.410 ; gain = 86.203
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 296.523 ; gain = 86.551
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'FSM' [E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v:7]
+INFO: [Synth 8-638] synthesizing module 'FSM_book' [E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM_book.v:1]
 	Parameter s0 bound to: 4'b0001 
 	Parameter s1 bound to: 4'b0010 
 	Parameter s2 bound to: 4'b0100 
 	Parameter s3 bound to: 4'b1000 
-INFO: [Synth 8-256] done synthesizing module 'FSM' (1#1) [E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v:7]
+INFO: [Synth 8-256] done synthesizing module 'FSM_book' (1#1) [E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM_book.v:1]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 333.828 ; gain = 123.621
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 333.082 ; gain = 123.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 333.828 ; gain = 123.621
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 333.082 ; gain = 123.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 333.828 ; gain = 123.621
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 333.082 ; gain = 123.109
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 336.441 ; gain = 126.234
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 340.910 ; gain = 130.938
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -58,10 +56,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -69,16 +64,13 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module FSM 
+Module FSM_book 
 Detailed RTL Component Info : 
 +---Registers : 
 	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -95,33 +87,21 @@ No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (next_state_reg[3]) is unused and will be removed from module FSM.
-WARNING: [Synth 8-3332] Sequential element (next_state_reg[2]) is unused and will be removed from module FSM.
-WARNING: [Synth 8-3332] Sequential element (next_state_reg[1]) is unused and will be removed from module FSM.
-WARNING: [Synth 8-3332] Sequential element (next_state_reg[0]) is unused and will be removed from module FSM.
-WARNING: [Synth 8-3332] Sequential element (next_state_reg[3]__0) is unused and will be removed from module FSM.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'next_state_reg[3]__0/Q' [E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v:26]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v:26]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v:26]
-WARNING: [Synth 8-3332] Sequential element (next_state_reg[2]__0) is unused and will be removed from module FSM.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'next_state_reg[2]__0/Q' [E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v:26]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v:26]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v:26]
-WARNING: [Synth 8-3332] Sequential element (next_state_reg[1]__0) is unused and will be removed from module FSM.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'next_state_reg[1]__0/Q' [E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v:26]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v:26]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v:26]
-WARNING: [Synth 8-3332] Sequential element (next_state_reg[0]__0) is unused and will be removed from module FSM.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'next_state_reg[0]__0/Q' [E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v:26]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'VCC' [E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v:26]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/Workspace/Vivado_16.4/2017_12_7_FSM/Design/Code/FSM.v:26]
-WARNING: [Synth 8-3332] Sequential element (out_reg) is unused and will be removed from module FSM.
-WARNING: [Synth 8-3332] Sequential element (current_state_reg[3]) is unused and will be removed from module FSM.
-WARNING: [Synth 8-3332] Sequential element (current_state_reg[2]) is unused and will be removed from module FSM.
-WARNING: [Synth 8-3332] Sequential element (current_state_reg[1]) is unused and will be removed from module FSM.
-WARNING: [Synth 8-3332] Sequential element (current_state_reg[0]) is unused and will be removed from module FSM.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\next_state_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\next_state_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\next_state_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\next_state_reg[2] )
+INFO: [Synth 8-3886] merging instance 'current_state_reg[3]' (FDC) to 'current_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'current_state_reg[1]' (FDC) to 'current_state_reg[2]'
+WARNING: [Synth 8-3332] Sequential element (next_state_reg[3]) is unused and will be removed from module FSM_book.
+WARNING: [Synth 8-3332] Sequential element (next_state_reg[2]) is unused and will be removed from module FSM_book.
+WARNING: [Synth 8-3332] Sequential element (next_state_reg[1]) is unused and will be removed from module FSM_book.
+WARNING: [Synth 8-3332] Sequential element (next_state_reg[0]) is unused and will be removed from module FSM_book.
+WARNING: [Synth 8-3332] Sequential element (current_state_reg[2]) is unused and will be removed from module FSM_book.
+WARNING: [Synth 8-3332] Sequential element (current_state_reg[0]) is unused and will be removed from module FSM_book.
+WARNING: [Synth 8-3332] Sequential element (out_reg) is unused and will be removed from module FSM_book.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 425.746 ; gain = 215.539
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 452.113 ; gain = 242.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -134,7 +114,7 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 425.746 ; gain = 215.539
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 452.113 ; gain = 242.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -146,7 +126,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 427.559 ; gain = 217.352
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 453.172 ; gain = 243.199
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -170,7 +150,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 427.559 ; gain = 217.352
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 453.172 ; gain = 243.199
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -183,7 +163,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 427.559 ; gain = 217.352
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 453.172 ; gain = 243.199
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -195,25 +175,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 427.559 ; gain = 217.352
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 453.172 ; gain = 243.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 427.559 ; gain = 217.352
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 453.172 ; gain = 243.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 427.559 ; gain = 217.352
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 453.172 ; gain = 243.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 427.559 ; gain = 217.352
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 453.172 ; gain = 243.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -239,11 +219,11 @@ Report Instance Areas:
 |1     |top      |       |     1|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 427.559 ; gain = 217.352
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 453.172 ; gain = 243.199
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 12 critical warnings and 13 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 427.559 ; gain = 205.922
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 427.559 ; gain = 217.352
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 453.172 ; gain = 231.586
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 453.172 ; gain = 243.199
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -251,9 +231,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-12 Infos, 13 Warnings, 12 Critical Warnings and 0 Errors encountered.
+16 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 540.793 ; gain = 325.980
-INFO: [Common 17-1381] The checkpoint 'E:/Workspace/Vivado_16.4/2017_12_7_FSM/FSM.runs/synth_1/FSM.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.019 . Memory (MB): peak = 540.793 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 08 22:49:17 2017...
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 531.059 ; gain = 316.473
+INFO: [Common 17-1381] The checkpoint 'E:/Workspace/Vivado_16.4/2017_12_7_FSM/FSM.runs/synth_1/FSM_book.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 531.059 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 10 11:24:18 2017...
