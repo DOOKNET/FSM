@@ -2,11 +2,11 @@
 module tb_FSM();
 
 reg 	sclk;
-reg		rst_n;
-reg		din;
+reg	rst_n;
+reg	din;
 wire 	dout;
 
-//------------系统时钟、复位---------//
+//--------设置系统时钟和复位--------//
 initial	begin
 	sclk = 1;
 	rst_n = 0;
@@ -16,7 +16,7 @@ end
 always	#10	sclk = ~sclk;
 //--------------------------------//
 
-//-----------定义输入-------------//
+//-----------输入信号-------------//
 initial	begin
 	din = 1;
 	#100
